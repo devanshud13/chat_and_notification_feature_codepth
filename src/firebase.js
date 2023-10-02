@@ -44,10 +44,8 @@ import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 import { getMessaging, getToken, onMessage } from "firebase/messaging"; // Import Firebase Messaging
 import { useEffect } from "react";
-
-const API_KEY = process.env.REACT_APP_FIREBASE_KEY;
 const firebaseConfig = {
-  apiKey: API_KEY,
+  apiKey: "AIzaSyAhRXYsuWV9ga06Clz3fyadnCApOwuerWk",
   authDomain: "chat-engine-8dbde.firebaseapp.com",
   projectId: "chat-engine-8dbde",
   storageBucket: "chat-engine-8dbde.appspot.com",
@@ -55,19 +53,6 @@ const firebaseConfig = {
   appId: "1:654735497077:web:e95d3917f9a3035db5653c",
   measurementId: "G-2355KSKVN7"
 };
-
-console.log(API_KEY);
-
-// Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth();
-export const storage = getStorage();
-export const db = getFirestore();
-
-// Initialize Firebase Messaging
-const messaging = getMessaging();
-
-// Request permission to receive notifications
 const requestNotificationPermission = async () => {
   try {
     const permission = await Notification.requestPermission();
@@ -80,6 +65,18 @@ const requestNotificationPermission = async () => {
     console.error("Error requesting notification permission:", error);
   }
 };
+requestNotificationPermission();
+// Initialize Firebase
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth();
+export const storage = getStorage();
+export const db = getFirestore();
+
+// Initialize Firebase Messaging
+const messaging = getMessaging();
+
+// Request permission to receive notifications
+
 
 // Get the FCM token for the user
 const getFCMToken = async () => {
