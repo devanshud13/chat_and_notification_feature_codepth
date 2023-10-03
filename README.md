@@ -1,4 +1,4 @@
-# Chat App with Real-time Chat 
+# Real-time Chat App 
 
 ## Frontend
 
