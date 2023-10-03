@@ -1,5 +1,43 @@
-# Update
+# Chat App with Real-time Chat and Notifications
 
-After the new update of React, you won't be able to use CRA. But you can easily create your applications with Vite before following the video tutorial.
+## Frontend
 
-[Create a React App with Vite](https://github.com/safak/youtube23/tree/react-mini)
+### Setup
+
+1. Clone the repository.
+2. Install dependencies with `npm install`.
+
+### Usage
+
+1. Configure Firebase:
+   - Create a Firebase project.
+   - Set up Firebase Authentication and Firestore.
+   - Add Firebase configuration to `src/firebase.js`.
+
+2. Start the development server with `npm start`.
+
+3. Access the app at `http://localhost:3000`.
+
+4. Use the chat feature to send and receive real-time messages.
+5. Initiate new chat conversations as needed.
+6. Receive notifications for new matches and messages.
+
+## Backend
+
+### Setup
+
+1. Set up Firebase Cloud Functions for your project.
+
+### Usage
+
+1. Implement Firebase Cloud Functions to handle notifications for new matches and messages.
+2. Use Firebase Cloud Messaging to send push notifications to users.
+3. Deploy the Firebase Cloud Functions to Firebase.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
